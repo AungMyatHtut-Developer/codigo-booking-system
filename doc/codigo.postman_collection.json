@@ -1,0 +1,700 @@
+{
+	"info": {
+		"_postman_id": "ccf4381f-d60d-43a6-b029-9dbebc345fd2",
+		"name": "codigo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17612720"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Aung97\",\r\n    \"password\":\"Password1234*\",\r\n    \"email\":\"aung@gmail.com\",\r\n    \"countryCode\":\"SG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/v1/unauth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"unauth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"467805\",\r\n    \"email\":\"aung@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/v1/unauth/verify-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"unauth",
+								"verify-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"myat@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/v1/unauth/generate-otp",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"unauth",
+								"generate-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aung@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/v1/unauth/forgot-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"unauth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password with otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"242308\",\r\n    \"email\":\"aung@gmail.com\",\r\n    \"password\":\"Password1234*\",\r\n    \"confirmPassword\":\"Password1234*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/v1/unauth/change-password-with-otp",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"unauth",
+								"change-password-with-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"Password1234*\",\r\n    \"email\":\"aung@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/user/v1/unauth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"unauth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/user/v1/auth/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/user/v1/auth/change-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/user/v1/auth/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"v1",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "package",
+			"item": [
+				{
+					"name": "all packages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/package/v1/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"package",
+								"v1",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "packages by country code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/package/v1/all-with-country-code?countryCode=SG",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"package",
+								"v1",
+								"all-with-country-code"
+							],
+							"query": [
+								{
+									"key": "countryCode",
+									"value": "SG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "package detail info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/package/v1/detail-info?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"package",
+								"v1",
+								"detail-info"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purchase package",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"packageId\":1,\r\n    \"creditCardNumber\":\"797808908907\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/package/v1/purchase-package",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"package",
+								"v1",
+								"purchase-package"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all purchased packages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjE5ODI4NCwiZXhwIjoxNzQ2MjAxODg0fQ.aDOWpgTqRv7rVCh8eKNiUrNRZqV4speu7eDqpvq-YKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"packageId\":10,\r\n    \"creditCardNumber\":\"797808908907\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/package/v1/get-all-purchased-package",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"package",
+								"v1",
+								"get-all-purchased-package"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "classes",
+			"item": [
+				{
+					"name": "all classes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjE5MTc5NSwiZXhwIjoxNzQ2MTk1Mzk1fQ.c-3SAsakikuX7qHmq8akzRwOu5Gm4IZ1H85MAjhvEtw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/classes/v1/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "classes by country code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjE5MTc5NSwiZXhwIjoxNzQ2MTk1Mzk1fQ.c-3SAsakikuX7qHmq8akzRwOu5Gm4IZ1H85MAjhvEtw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/classes/v1/all-with-country-code?countryCode=MM",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"all-with-country-code"
+							],
+							"query": [
+								{
+									"key": "countryCode",
+									"value": "MM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book class",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIwNDQzNSwiZXhwIjoxNzQ2MjA4MDM1fQ.d726_mSQia5d5aTanCQkPBM0Flj_oSJoA2bayWycCck",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classId\":1,\r\n    \"userPackageId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/classes/v1/book",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classId\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/classes/v1/cancel",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check in",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classId\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/classes/v1/check-in?classId=6",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"check-in"
+							],
+							"query": [
+								{
+									"key": "classId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get booked classes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMzQ2OSwiZXhwIjoxNzQ2MjE3MDY5fQ.yX8AXhPL08k3x_G63dP7F6Xk9EAlA3M-fidjvxRzce0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/classes/v1/booked-classes",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"booked-classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cancelled classses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdW5nQGdtYWlsLmNvbSIsImlhdCI6MTc0NjIxMTc0MCwiZXhwIjoxNzQ2MjE1MzQwfQ.SWLPRIwIaSSxgEvclVdgDcirgWfo_CBXKqNP7alXO7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/classes/v1/cancelled-classes",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"classes",
+								"v1",
+								"cancelled-classes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
